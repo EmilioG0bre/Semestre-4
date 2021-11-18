@@ -1,0 +1,9 @@
+﻿  Tarea 1.cpp
+D:\Programacion\Tarea 1\Tarea 1.cpp(27,28): error C3861: 'strtoks_s': no se encontró el identificador
+D:\Programacion\Tarea 1\Tarea 1.cpp(30,35): error C2664: 'int printf(const char *const ,...)': el argumento 1 no puede convertirse de 'char' a 'const char *const '
+D:\Programacion\Tarea 1\Tarea 1.cpp(30,28): message : La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h(950,37): message : vea la declaración de 'printf'
+D:\Programacion\Tarea 1\Tarea 1.cpp(32,53): error C2440: '=': no se puede realizar la conversión de 'char *' a 'char'
+D:\Programacion\Tarea 1\Tarea 1.cpp(32,37): message : No existe un contexto en el que sea posible realizar esta conversión
+D:\Programacion\Tarea 1\Tarea 1.cpp(48,5): error C2059: error de sintaxis: 'return'
+D:\Programacion\Tarea 1\Tarea 1.cpp(7): fatal error C1075: "{": no se encontró ningún token coincidente
