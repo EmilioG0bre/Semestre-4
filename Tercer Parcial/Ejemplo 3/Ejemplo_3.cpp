@@ -104,6 +104,7 @@ void estudiante::Imprimir_Datos()
     std::cout << "\nLos datos son:";
     std::cout << "\nRegistro: ";
     std::cout << registro;
+    std::cout << "\n";
 }
 void profesor::imprimir_profesor()
 {
