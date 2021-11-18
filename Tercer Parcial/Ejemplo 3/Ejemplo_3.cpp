@@ -8,30 +8,30 @@ char nombre[40];
 int registro;
 int nomina;
 char puesto[40];
-
-void leer1()
+void leer(int ban)
 {
-    std::cout << "Edad: ";
-    std::cin >> edad;
-    std::cin.ignore();
-    std::cout << "Nombre: ";
-    gets(nombre);
+    if (ban == 0)
+    {
+        std::cout << "Registro: ";
+        std::cin >> registro;
+    }
+    else if (ban == 1)
+    {
+        std::cout << "Nomina: ";
+        std::cin >> nomina;
+        std::cout << "Puesto: ";
+        gets(puesto);
+        gets(puesto);
+    }
+    else
+    {
+        std::cout << "Edad: ";
+        std::cin >> edad;
+        std::cin.ignore();
+        std::cout << "Nombre: ";
+        gets(nombre);
+    }
 }
-void leer2()
-{
-    std::cout << "Registro: ";
-    std::cin >> registro;
-}
-
-void leer3()
-{
-    std::cout << "Nomina: ";
-    std::cin >> nomina;
-    std::cout << "Puesto: ";
-    gets(puesto);
-    gets(puesto);
-}
-
 class persona
 {
 public:
@@ -48,9 +48,8 @@ class estudiante : public persona
 public:
     int registro;
     estudiante(int, int, char *);
-    void leer2();
-    void Imprimir_Datos();
     ~estudiante();
+    void Imprimir_Datos();
 };
 
 class profesor : public estudiante
@@ -59,9 +58,8 @@ public:
     int nomina;
     char puesto[40];
     profesor(char *, int, int, char *, int);
-    void imprimir_profesor();
-    void leer3();
     ~profesor();
+    void imprimir_profesor();
 };
 
 persona::persona(char *nombre, int edad)
@@ -74,7 +72,7 @@ persona::~persona()
     std::cout << "Destruyendo Objeto...\n";
 }
 
-estudiante::estudiante(int registro, int Edad, char *nombre) : persona(nombre, edad)
+estudiante::estudiante(int registro, int edad, char *nombre) : persona(nombre, edad)
 {
     estudiante::registro = registro;
 }
@@ -106,21 +104,10 @@ void estudiante::Imprimir_Datos()
     std::cout << "\nLos datos son:";
     std::cout << "\nRegistro: ";
     std::cout << registro;
-    std::cout << "\nEdad: ";
-    std::cout << edad;
-    std::cout << "\nNombre: ";
-    std::cout << nombre;
-    std::cout << "\n";
 }
 void profesor::imprimir_profesor()
 {
     std::cout << "\nLos datos son:";
-    std::cout << "\nNombre: ";
-    std::cout << nombre;
-    std::cout << "\nEdad: ";
-    std::cout << edad;
-    std::cout << "\nRegistro: ";
-    std::cout << registro;
     std::cout << "\nPuesto: ";
     std::cout << puesto;
     std::cout << "\nNomina: ";
@@ -139,7 +126,7 @@ int main()
         {
         case '1':
         {
-            leer1();
+            leer(3);
             persona obP(nombre, edad);
             obP.muestra();
         }
@@ -147,7 +134,7 @@ int main()
 
         case '2':
         {
-            leer2();
+            leer(0);
             estudiante objE(registro, edad, nombre);
             objE.Imprimir_Datos();
         }
@@ -155,7 +142,7 @@ int main()
 
         case '3':
         {
-            leer3();
+            leer(1);
             profesor objP(nombre, edad, registro, puesto, nomina);
             objP.imprimir_profesor();
         }
