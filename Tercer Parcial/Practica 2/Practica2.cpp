@@ -1,6 +1,7 @@
 /* 
 A- Crear y mostrar 1 objeto de la clase Articulo (Base) ( Descripción, Costo) 
 B- Crear y mostrar 1 objeto de la clase Heredada Venta ( Vta_Total + Clase Base) 
+C- Crear y mostrar 1 objeto de Herencia Escalonada Factura
 S- Salir
  */
 #include <iostream>
