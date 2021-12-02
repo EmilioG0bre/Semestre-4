@@ -75,7 +75,7 @@ persona::persona(char *nombre)
 }
 persona::~persona()
 {
-    std::cout << "Destruyendo Objeto...\n";
+    std::cout << "Destruyendo Objeto...1\n\n";
 }
 
 estudiante::estudiante(int registro, int edad, char *nombre) : persona(nombre, edad)
@@ -88,7 +88,7 @@ estudiante::estudiante(int registro, char *nombre) : persona(nombre)
 }
 estudiante::~estudiante()
 {
-    std::cout << "Destruyendo Objeto...\n";
+    std::cout << "Destruyendo Objeto...2\n\n";
 }
 
 profesor::profesor(char *nombre, int edad, int registro, char *puesto, int nomina) : estudiante(registro, edad, nombre)
@@ -98,7 +98,7 @@ profesor::profesor(char *nombre, int edad, int registro, char *puesto, int nomin
 }
 profesor::~profesor()
 {
-    std::cout << "Destruyendo Objeto...\n";
+    std::cout << "Destruyendo Objeto...3\n\n";
 }
 
 void persona::muestra()
@@ -108,14 +108,14 @@ void persona::muestra()
     std::cout << edad;
     std::cout << "\nNombre: ";
     std::cout << nombre;
-    std::cout << "\n";
+    std::cout << "\n\n";
 }
 void estudiante::Imprimir_Datos()
 {
     std::cout << "\nLos datos son:";
     std::cout << "\nRegistro: ";
     std::cout << registro;
-    std::cout << "\n";
+    std::cout << "\n\n";
 }
 void profesor::imprimir_profesor()
 {
@@ -124,7 +124,7 @@ void profesor::imprimir_profesor()
     std::cout << puesto;
     std::cout << "\nNomina: ";
     std::cout << nomina;
-    std::cout << "\n";
+    std::cout << "\n\n";
 }
 
 int main()
@@ -132,7 +132,7 @@ int main()
     char caso = 0;
     do
     {
-        std::cout << "\nCase 1: Persona, Case 2: Estudiante, Case 3: Profesor, case 0: Salir\n";
+        std::cout << "Case 1: Persona\nCase 2: Estudiante\nCase 3: Profesor\ncase 0: Salir\n\n";
         std::cin >> caso;
         switch (caso)
         {
