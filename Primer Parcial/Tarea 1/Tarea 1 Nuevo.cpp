@@ -7,7 +7,7 @@ int main()
     int i = 0;
     do
     {
-        std::cout << "seleccione una opcion a: las A a 1\nb:Contador de Consonantes\nc:Salir ";
+        std::cout << "seleccione una opción\na: las A a 1\nb:Contador de Consonantes\nc:Salir ";
         char opcion;
         std::cin >> opcion;
 

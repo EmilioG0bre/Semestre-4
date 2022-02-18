@@ -11,7 +11,7 @@ int main()
     {
 
         cout << "Menu de Opciones" << endl;
-        cout << "1. Cambiar letra A y a a el nnumero 1" << endl;
+        cout << "1. Cambiar letra A y a a el numero 1" << endl;
         cout << "2. Cuantas conosonantes hay en una cadena" << endl;
         cout << "0. SALIR" << endl;
 
